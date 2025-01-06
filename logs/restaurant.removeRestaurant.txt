@@ -1,0 +1,6 @@
+[06/01/2025 11:33:46]ReferenceError: Cannot access 'restaurant' before initialization
+
+[06/01/2025 11:34:00]ReferenceError: Cannot access 'restaurant' before initialization
+
+[06/01/2025 11:35:25]ReferenceError: Cannot access 'restaurant' before initialization
+

@@ -1,5 +1,4 @@
 const express = require('express');
-const multer = require('multer'); 
 
 const { getList, getOne, create, update, remove, upload } = require('../controllers/restaurantController');
 const { uploadImage } = require('../utils/services');
