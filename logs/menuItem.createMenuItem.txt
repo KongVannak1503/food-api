@@ -1,0 +1,10 @@
+[04/01/2025 15:26:57]ReferenceError: image is not defined
+
+[04/01/2025 15:56:27]ReferenceError: error is not defined
+
+[04/01/2025 15:58:31]ReferenceError: error is not defined
+
+[05/01/2025 00:24:01]TypeError: files is not iterable
+
+[05/01/2025 00:45:33]ReferenceError: uploadFilesToGoogleDrive is not defined
+

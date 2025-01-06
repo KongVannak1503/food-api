@@ -1,0 +1,32 @@
+[27/12/2024 15:09:10]ReferenceError: mongoose is not defined
+
+[27/12/2024 15:10:14]CastError: Cast to ObjectId failed for value "1" (type string) at path "restaurantId" for model "MenuItem"
+
+[27/12/2024 15:11:10]ReferenceError: mongoose is not defined
+
+[27/12/2024 15:11:26]ReferenceError: mongoose is not defined
+
+[27/12/2024 15:12:07]ReferenceError: mongoose is not defined
+
+[27/12/2024 15:12:26]CastError: Cast to ObjectId failed for value "60f72b2f4f1a2c001c8b456" (type string) at path "restaurantId" for model "MenuItem"
+
+[27/12/2024 15:12:50]CastError: Cast to ObjectId failed for value "60f72b2f4f1a2c001c8b456" (type string) at path "restaurantId" for model "MenuItem"
+
+[27/12/2024 15:14:29]ReferenceError: mongoose is not defined
+
+[27/12/2024 15:15:17]ReferenceError: mongoose is not defined
+
+[27/12/2024 15:15:37]ReferenceError: mongoose is not defined
+
+[27/12/2024 15:15:58]ReferenceError: objectId is not defined
+
+[27/12/2024 15:16:22]CastError: Cast to ObjectId failed for value "60f72b2f4f1a2c001c8b456" (type string) at path "restaurantId" for model "MenuItem"
+
+[27/12/2024 15:17:28]CastError: Cast to ObjectId failed for value "60f72b2f4f1a2c001c8b456" (type string) at path "restaurantId" for model "MenuItem"
+
+[27/12/2024 15:20:23]TypeError: Class constructor ObjectId cannot be invoked without 'new'
+
+[27/12/2024 15:20:53]TypeError: Class constructor ObjectId cannot be invoked without 'new'
+
+[27/12/2024 15:21:18]TypeError: Class constructor ObjectId cannot be invoked without 'new'
+

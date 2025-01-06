@@ -1,0 +1,6 @@
+[18/12/2024 09:56:14]StrictPopulateError: Cannot populate path `restaurant` because it is not in your schema. Set the `strictPopulate` option to false to override.
+
+[04/01/2025 11:05:48]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "MenuItem"
+
+[04/01/2025 11:05:48]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "MenuItem"
+

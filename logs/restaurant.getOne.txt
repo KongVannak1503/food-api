@@ -1,0 +1,46 @@
+[22/12/2024 00:29:03]CastError: Cast to ObjectId failed for value "create" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 15:51:31]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 15:51:31]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 15:52:05]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 15:52:13]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 15:56:05]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 15:56:05]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 15:56:27]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 15:56:30]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 15:56:30]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:00:11]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:00:11]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:00:14]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:00:27]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:00:27]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:01:56]CastError: Cast to ObjectId failed for value "60d39982-8b7f-4b20-8eda-7b0109300c44" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:04:29]CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:04:29]CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:04:57]CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:04:57]CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Restaurant"
+
+[27/12/2024 11:49:55]CastError: Cast to ObjectId failed for value "menuitems" (type string) at path "_id" for model "Restaurant"
+
+[27/12/2024 14:50:37]CastError: Cast to ObjectId failed for value "menu" (type string) at path "_id" for model "Restaurant"
+
+[27/12/2024 14:54:52]CastError: Cast to ObjectId failed for value "menu" (type string) at path "_id" for model "Restaurant"
+

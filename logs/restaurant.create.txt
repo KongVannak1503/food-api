@@ -1,0 +1,16 @@
+[16/12/2024 09:39:50]ValidationError: open_time: Cast to date failed for value "08:00 AM" (type string) at path "open_time", close_time: Cast to date failed for value "10:00 PM" (type string) at path "close_time"
+
+[16/12/2024 09:40:38]ValidationError: open_time: Cast to date failed for value "08:00" (type string) at path "open_time", close_time: Cast to date failed for value "10:00" (type string) at path "close_time"
+
+[20/12/2024 20:19:22]ReferenceError: image is not defined
+
+[20/12/2024 20:19:40]ReferenceError: image is not defined
+
+[20/12/2024 20:19:45]ReferenceError: image is not defined
+
+[20/12/2024 20:20:46]ReferenceError: image is not defined
+
+[20/12/2024 20:21:10]ReferenceError: image is not defined
+
+[20/12/2024 20:22:30]ReferenceError: image is not defined
+

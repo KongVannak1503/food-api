@@ -1,0 +1,32 @@
+[30/12/2024 10:22:37]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:37]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:37]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:37]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:37]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:37]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:37]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:37]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:39]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:39]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:39]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:39]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:39]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:39]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:39]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+
+[30/12/2024 10:22:39]CastError: Cast to ObjectId failed for value "undefined" (type string) at path "restaurantId" for model "MenuItem"
+

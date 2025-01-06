@@ -1,0 +1,2 @@
+[18/12/2024 15:35:13]TypeError: DeliveryPartner.save is not a function
+

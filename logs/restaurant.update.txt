@@ -1,0 +1,6 @@
+[16/12/2024 10:10:32]TypeError: Assignment to constant variable.
+
+[22/12/2024 15:58:09]CastError: Cast to ObjectId failed for value "60d39982-8b7f-4b20-8eda-7b0109300c44" (type string) at path "_id" for model "Restaurant"
+
+[22/12/2024 16:05:25]ReferenceError: code is not defined
+
