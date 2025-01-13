@@ -151,6 +151,7 @@ const removeMenuItem = async (req, res) => {
     }
 };
 
+
 // Get Menu by Restaurant ID
 const getMenuByRestaurant = async (req, res) => {
     try {
@@ -172,6 +173,17 @@ const getMenuByRestaurant = async (req, res) => {
         });
     } catch (error) {
         logError('menuItem.getMenuByRestaurant', error, res);
+    }
+};
+const getAllMenus = async (req, res) => {
+    try {
+        const menus = await MenuItem.find().populate('restaurantId'); // Populate the related restaurant
+        res.status(200).json({
+            message: "List of menu",
+            data: menus,
+        });
+    } catch (error) {
+        logError('menu.getList', error, res);
     }
 };
 
@@ -223,12 +235,13 @@ const getMenuItemCounts = async (req, res) => {
 };
 
 // Exporting functions and the upload middleware
-module.exports = { 
-    getMenuByRestaurant, 
-    getMenuItemById, 
-    createMenuItem, 
-    updateMenuItem, 
-    removeMenuItem, 
-    getMenuItemCounts, 
-    upload 
+module.exports = {
+    getMenuByRestaurant,
+    getMenuItemById,
+    createMenuItem,
+    updateMenuItem,
+    removeMenuItem,
+    getMenuItemCounts,
+    getAllMenus,
+    upload
 };

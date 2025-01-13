@@ -5,12 +5,16 @@ const Delivery = require('../models/deliveryModel');
 // Create a new order
 exports.createOrder = async (req, res) => {
     try {
-        const { total_amount, delivery_fee, order_status, user, restaurant, order_items } = req.body;
+        const { total_amount, delivery_fee, order_status, user, restaurant, order_items, address, addressLink } = req.body;
 
         // Step 1: Create OrderItem documents
         const createdOrderItems = await Promise.all(
             order_items.map(async (item) => {
-                const orderItem = new OrderItem(item);
+                const orderItem = new OrderItem({
+                    menu_item_id: item.menu_item_id, // Assuming the menu item ID is passed here
+                    quantity: item.quantity,
+                    price: item.price
+                });
                 await orderItem.save();
                 return orderItem._id; // Return the ID of the created OrderItem
             })
@@ -24,6 +28,8 @@ exports.createOrder = async (req, res) => {
             delivery_fee,
             total_amount,
             order_status,
+            address,
+            addressLink
         });
 
         await newOrder.save();
@@ -41,12 +47,13 @@ exports.createOrder = async (req, res) => {
 exports.getOrders = async (req, res) => {
     try {
         const orders = await Order.find()
-                                    .populate('user', 'name email') // Populate user details
-                                    .populate('restaurant', 'name') // Populate restaurant details
-                                    .populate({
-                                        path: 'order_items',
-                                        populate: { path: 'menu_item', select: 'name price' }, // Populate menu_item inside order_items
-                                    });
+            .populate('user', 'name email') // Populate user details
+            .populate('restaurant', 'name') // Populate restaurant details
+            .populate({
+                path: 'order_items',
+                populate: { path: 'menu_item_id', select: 'name price' }, // Populate menu_item inside order_items
+            });
+
         return res.status(200).json(orders);
     } catch (error) {
         return res.status(500).json({ message: 'Error fetching orders', error });
@@ -57,7 +64,7 @@ exports.getOrders = async (req, res) => {
 exports.updateOrderStatus = async (req, res) => {
     try {
         const { orderId } = req.params;
-        const {status} = req.body;
+        const { status } = req.body;
         const validStatuses = ['Pending', 'Delivered', 'Cancelled'];
 
         if (!validStatuses.includes(status)) {

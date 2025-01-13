@@ -1,39 +1,96 @@
+const Order = require('../models/orderModel');
 const OrderItem = require('../models/orderItemModel');
 
-// Add items to an order
-exports.addOrderItems = async (req, res) => {
+// Create a new order
+exports.createOrder = async (req, res) => {
     try {
-        const { orderId, items } = req.body;
+        const { total_amount, delivery_fee, order_status, user, restaurant, order_items } = req.body;
 
-        for (const item of items) {
-            const newOrderItem = new OrderItem({
-                order: orderId,
-                menu_item: item.menu_item,
-                quantity: item.quantity,
-                price: item.price
-            });
-            await newOrderItem.save();
-        }
+        // Step 1: Create OrderItem documents
+        const createdOrderItems = await Promise.all(
+            order_items.map(async (item) => {
+                const orderItem = new OrderItem({
+                    menu_item_id: item.menu_item_id,
+                    quantity: item.quantity,
+                    price: item.price
+                });
+                await orderItem.save();
+                return orderItem._id; // Return the ID of the created OrderItem
+            })
+        );
 
-        return res.status(201).json({ message: 'Order items added successfully' });
+        // Step 2: Create the Order document with references to OrderItem IDs
+        const newOrder = new Order({
+            user,
+            restaurant,
+            order_items: createdOrderItems,
+            delivery_fee,
+            total_amount,
+            order_status,
+        });
+
+        await newOrder.save();
+
+        res.status(201).json({
+            message: 'Order created successfully',
+            order: newOrder,
+        });
     } catch (error) {
-        return res.status(500).json({ message: 'Error adding order items', error });
+        return res.status(500).json({ message: 'Error creating order', error });
     }
 };
 
-// Remove an order item
-exports.removeOrderItem = async (req, res) => {
+// Get all orders
+exports.getOrders = async (req, res) => {
     try {
-        const { orderItemId } = req.params;
+        const orders = await Order.find()
+            .populate('user', 'name email') // Populate user details
+            .populate('restaurant', 'name') // Populate restaurant details
+            .populate({
+                path: 'order_items',
+                populate: { path: 'menu_item_id', select: 'name price' }, // Populate menu_item_id inside order_items
+            });
+        return res.status(200).json(orders);
+    } catch (error) {
+        return res.status(500).json({ message: 'Error fetching orders', error });
+    }
+};
 
-        const deletedItem = await OrderItem.findByIdAndDelete(orderItemId);
+// Update an order status
+exports.updateOrderStatus = async (req, res) => {
+    try {
+        const { orderId } = req.params;
+        const { status } = req.body;
+        const validStatuses = ['Pending', 'Delivered', 'Cancelled'];
 
-        if (!deletedItem) {
-            return res.status(404).json({ message: 'Order item not found' });
+        if (!validStatuses.includes(status)) {
+            return res.status(400).json({ message: 'Invalid status' });
         }
 
-        return res.status(200).json({ message: 'Order item removed successfully' });
+        const updatedOrder = await Order.findByIdAndUpdate(orderId, { order_status: status }, { new: true });
+
+        if (!updatedOrder) {
+            return res.status(404).json({ message: 'Order not found' });
+        }
+
+        return res.status(200).json({ message: 'Order status updated successfully', updatedOrder });
     } catch (error) {
-        return res.status(500).json({ message: 'Error removing order item', error });
+        return res.status(500).json({ message: 'Error updating order status', error });
+    }
+};
+
+// Delete an order
+exports.deleteOrder = async (req, res) => {
+    try {
+        const { orderId } = req.params;
+        const deletedOrder = await Order.findByIdAndDelete(orderId);
+
+        if (!deletedOrder) {
+            return res.status(404).json({ message: 'Order not found' });
+        }
+
+        return res.status(200).json({ message: 'Order deleted successfully' });
+    } catch (error) {
+        return res.status(500).json({ message: 'Error deleting order', error });
     }
 };
