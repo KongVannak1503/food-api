@@ -11,7 +11,7 @@ const OrderSchema = new mongoose.Schema({
         enum: ['Pending', 'Delivered', 'Cancelled'], // Order status options
         default: 'Pending',
     },
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Reference to the user placing the order
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // Reference to the user placing the order
     restaurant: { type: mongoose.Schema.Types.ObjectId, ref: 'Restaurant', required: true }, // Reference to the restaurant
     order_items: [{ type: mongoose.Schema.Types.ObjectId, ref: 'OrderItem' }], // Array of order items (references to OrderItem)
     address: { type: String, required: true }, // Address where the order will be delivered
